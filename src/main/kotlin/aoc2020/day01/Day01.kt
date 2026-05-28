@@ -1,6 +1,3 @@
-// Advent of Code 2020 – Dag 1
-// Hitta tal som summerar till 2020
-
 package aoc2020.day01
 
 import java.io.File
@@ -8,57 +5,52 @@ import java.io.File
 private const val TARGET = 2020
 
 fun main() {
-    val numbers = läsInput()
+    val nummer = läsInput()
 
-    println("=== Advent of Code 2020 – Dag 1 ===\n")
+    val del1 = hittaTvåTal(nummer)
+    val del2 = hittaTreTal(nummer)
 
-    val delA = hittaTvåTal(numbers)
-    val delB = hittaTreTal(numbers)
-
-    println("Del a: $delA")
-    println("Del b: $delB")
+    println("Del 1: $del1")
+    println("Del 2: $del2")
 }
 
-// Läser in tal från fil
 fun läsInput(): List<Int> {
     return File("src/main/resources/day01.txt")
         .readLines()
-        .map(String::toInt)
+        .map { it.toInt() }
 }
 
-// Del a - två tal som blir 2020
-fun hittaTvåTal(numbers: List<Int>): Int {
-    for (i in numbers.indices) {
-        for (j in i + 1 until numbers.size) {
+fun hittaTvåTal(nummer: List<Int>): Int {
+    for (i in nummer.indices) {
+        for (j in i + 1 until nummer.size) {
 
-            val first = numbers[i]
-            val second = numbers[j]
+            val första = nummer[i]
+            val andra = nummer[j]
 
-            if (first + second == TARGET) {
-                return first * second
+            if (första + andra == TARGET) {
+                return första * andra
             }
         }
     }
 
-    error("Inga två tal summerar till $TARGET")
+    error("Hittade inga två tal")
 }
 
-// Del b - tre tal som blir 2020
-fun hittaTreTal(numbers: List<Int>): Int {
-    for (i in numbers.indices) {
-        for (j in i + 1 until numbers.size) {
-            for (k in j + 1 until numbers.size) {
+fun hittaTreTal(nummer: List<Int>): Int {
+    for (i in nummer.indices) {
+        for (j in i + 1 until nummer.size) {
+            for (k in j + 1 until nummer.size) {
 
-                val first = numbers[i]
-                val second = numbers[j]
-                val third = numbers[k]
+                val första = nummer[i]
+                val andra = nummer[j]
+                val tredje = nummer[k]
 
-                if (first + second + third == TARGET) {
-                    return first * second * third
+                if (första + andra + tredje == TARGET) {
+                    return första * andra * tredje
                 }
             }
         }
     }
 
-    error("Inga tre tal summerar till $TARGET")
+    error("Hittade inga tre tal")
 }
