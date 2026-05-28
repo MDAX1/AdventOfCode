@@ -15,9 +15,7 @@ fun main() {
 }
 
 fun läsInput(): List<Int> {
-    return File("src/main/resources/day01.txt")
-        .readLines()
-        .map { it.toInt() }
+    return File("src/main/resources/day01.txt").readLines().map { it.toInt() }
 }
 
 fun hittaTvåTal(nummer: List<Int>): Int {

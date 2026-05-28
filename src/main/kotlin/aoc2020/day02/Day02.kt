@@ -25,10 +25,7 @@ fun main() {
 }
 
 data class PasswordPolicy(
-    val min: Int,
-    val max: Int,
-    val bokstav: Char,
-    val lösenord: String
+    val min: Int, val max: Int, val bokstav: Char, val lösenord: String
 )
 
 fun läsInput(): List<String> {

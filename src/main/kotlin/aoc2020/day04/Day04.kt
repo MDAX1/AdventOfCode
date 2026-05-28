@@ -42,13 +42,7 @@ fun parsePass(block: String): Map<String, String> {
 
 fun harAllaFält(pass: Map<String, String>): Boolean {
     val obligatoriska = listOf(
-        "byr",
-        "iyr",
-        "eyr",
-        "hgt",
-        "hcl",
-        "ecl",
-        "pid"
+        "byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"
     )
 
     for (fält in obligatoriska) {
@@ -107,13 +101,7 @@ fun allaVärdenGiltiga(pass: Map<String, String>): Boolean {
     }
 
     val ögonFärger = listOf(
-        "amb",
-        "blu",
-        "brn",
-        "gry",
-        "grn",
-        "hzl",
-        "oth"
+        "amb", "blu", "brn", "gry", "grn", "hzl", "oth"
     )
 
     if (ecl !in ögonFärger) {
@@ -126,4 +114,3 @@ fun allaVärdenGiltiga(pass: Map<String, String>): Boolean {
 
     return true
 }
-

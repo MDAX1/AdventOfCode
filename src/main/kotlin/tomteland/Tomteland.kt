@@ -55,29 +55,21 @@ fun körTester() {
     testa("Myran", listOf("Bladlusen"))
 
     testa(
-        "Trötter",
-        listOf("Skumtomten", "Dammråttan")
+        "Trötter", listOf("Skumtomten", "Dammråttan")
     )
 
     testa(
-        "Räven",
-        listOf("Gråsuggan", "Myran", "Bladlusen")
+        "Räven", listOf("Gråsuggan", "Myran", "Bladlusen")
     )
 
     testa(
-        "Glader",
-        listOf(
-            "Tröger",
-            "Trötter",
-            "Blyger",
-            "Skumtomten",
-            "Dammråttan"
+        "Glader", listOf(
+            "Tröger", "Trötter", "Blyger", "Skumtomten", "Dammråttan"
         )
     )
 
     testa(
-        "Tomten",
-        listOf(
+        "Tomten", listOf(
             "Glader",
             "Butter",
             "Tröger",
@@ -107,4 +99,3 @@ fun main() {
     println("Rävens underordnade: ${hämtaAllaUnderordnade("Räven")}")
     println("Tomtens underordnade: ${hämtaAllaUnderordnade("Tomten")}")
 }
-
