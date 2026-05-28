@@ -1,4 +1,4 @@
-# Advent of Code 2020 – Kotlin Solutions
+# Advent of Code 2020
 
 Mina lösningar till Advent of Code 2020 skrivna i Kotlin.
 
@@ -28,3 +28,6 @@ Varje dag ligger i ett eget paket och läser input från `src/main/resources`.
 
 * Kotlin
 * Gradle
+
+## contributers
+* MDAX1 (Mads) 
